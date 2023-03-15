@@ -5,6 +5,8 @@
 //     target.prototype.fn = () =>{
 //         console.log('abc');
 
+// import axios from "axios"
+
 //     }
 // }
 // @Base
@@ -81,3 +83,49 @@
 
 
 // 方法装饰器
+// import axios from "axios"
+// import 'reflect-metadata'
+// const Base = (name: string) => {
+//     const fn: ClassDecorator = (target) => {
+//         // console.log(target);
+//         target.prototype.xiaoman = name
+//         target.prototype.fn = () => {
+//             // console.log('eee');
+
+//         }
+//     }
+//     return fn
+// }
+
+// const Get = (url: string) => {
+//     const fn: MethodDecorator = (target,_:any, descriptor: PropertyDescriptor) => {
+//         const key = Reflect.getMetadata('key',target)
+//         axios.get(url).then(res => {
+//             descriptor.value(key ? res.data[key] : res.data)
+//         })
+
+//     }
+//     return fn
+// }
+// const Result = () =>{
+//     const fn:ParameterDecorator = (target,key,index) =>{
+//         // target原型对象，key getlist的名字，index参数所在的一个位置
+//         Reflect.defineMetadata('key','result',target)
+//         console.log(target,key,index);
+//         //  {},getlist,0
+        
+//     }
+//     return fn
+// }
+// @Base('xiao yu')
+// class Http {
+//     @Get('https://api.apiopen.top/api/getHaoKanVideo?page=0&size=10')
+//     getlist(@Result() data: any) {
+//          console.log(data);
+
+//     }
+//     create() {
+
+//     }
+// }
+// const http = new Http() as any
