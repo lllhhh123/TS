@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../src/main.ts"],"sourcesContent":["const a:string = 'asd'\r\n\r\nconsole.log(a);\r\n"],"names":["console","log"],"mappings":"gXAEAA,QAAQC,IAFS"}
