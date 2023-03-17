@@ -11,7 +11,7 @@ const isDev = () => {
     return process.env.NODE_ENV === 'development'
 }
 export default {
-    input: "./src/main.ts",
+    input: "./src/index.ts",
     output: {
         file: path.resolve(__dirname, './lib/index.js'),
         format: "umd",
